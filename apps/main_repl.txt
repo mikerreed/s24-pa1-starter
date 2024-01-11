@@ -1,0 +1,24 @@
+/**
+ *  Copyright 2023 Mike Reed
+ */
+
+// main() to run image and tests (works in repl.it)
+
+extern int main_image(int argc, const char *argv[]);
+extern int main_tests(int argc, const char *argv[]);
+
+int main() {
+    const char *tst[] = {
+        "tests",
+        "-v",
+    };
+    (void)main_tests(2, tst);
+
+    const char *img[] = {
+        "image",
+        "-e",
+        "expected",
+        "-v",
+    };
+    (void)main_image(4, img);
+}
